@@ -1,0 +1,8 @@
+web developpement html css ...
+programming languages : Python Java R
+machine learning  : supervised learning unsupervised learning , fuzzy Logic
+deep learning  : deep neural network, CNN 
+mathematics : linear algebra , modelisation , simulation, function analyzing 
+text mining    : text preprocessing, feature extraction
+visual analysis :
+project management : agile methodologies , scrum , xp
