@@ -256,55 +256,88 @@ srtop.reveal('.contact .container .form-group', { delay: 400 });
 
 
 
-const form = document.querySelector("#contact-form");
-form.addEventListener("submit", (e)=>{
+const btn = document.querySelector(".btnn");
+btn.addEventListener("click", (e) => {
+    e.preventDefault(); // Prevent default form submission
+
+    // Get input values
     var name = document.getElementById("name").value;
     var mail = document.getElementById("mail").value;
     var phone = document.getElementById("phone").value;
     var message = document.getElementById("message").value;
 
-    var token = "6629264956:AAHOWpJzr7vu4us3GfOtV7QXaL4ensfcQoc";
-    var chat_id = -1002247282254;
-    var txt = `-name = ${name}%0A-mail= ${mail}%0A-phone=${phone}%0A-message=${message}`
-    var url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${txt}`
-    let api = new XMLHttpRequest();
-    api.open("GET",url,true)
-    api.send();
-    alert("message sent To Ladraoui Anass Thank You");
-    api.onerror = function() {
-      
-    };
+    // Get input elements
+    var nameInput = document.getElementById("name");
+    var mailInput = document.getElementById("mail");
+    var phoneInput = document.getElementById("phone");
+    var messageInput = document.getElementById("message");
+
+    // Clear previous error styles
+    nameInput.style.borderColor = '';
+    mailInput.style.borderColor = '';
+    phoneInput.style.borderColor = '';
+    messageInput.style.borderColor = '';
+
+    var isValid = true;
+
+    // Validate inputs
+    if (name.trim() === '') {
+        nameInput.style.borderColor = 'red';
+        isValid = false;
+    }
     
-})
+    // Validate email format
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(mail)) {
+        mailInput.style.borderColor = 'red';
+        isValid = false;
+    }
 
-// const form = document.querySelector(".contact-form");
-// form.addEventListener("submit", (e) => {
-//   e.preventDefault(); // Prevent default form submission
+    // Validate phone number format (basic check, adjust as needed)
+    var phonePattern = /^[0-9]{10}$/;
+    if (!phonePattern.test(phone)) {
+        phoneInput.style.borderColor = 'red';
+        isValid = false;
+    }
 
-//   var name = document.getElementById("name").value;
-//   var mail = document.getElementById("mail").value;
-//   var phone = document.getElementById("phone").value;
-//   var message = document.getElementById("message").value;
+    // Validate message length
+    if (message.trim() === '') {
+        messageInput.style.borderColor = 'red';
+        isValid = false;
+    }
 
-//   var token = "6629264956:AAHOWpJzr7vu4us3GfOtV7QXaL4ensfcQoc";
-//   var chat_id = -1002247282254;
-//   var txt = `-name = ${name}%0A-mail=${mail}%0A-phone=${phone}%0A-message=${message}`;
-//   var url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${txt}`;
+    if (isValid) {
+        // If all inputs are valid, proceed with sending the message
+        var token = "6629264956:AAHOWpJzr7vu4us3GfOtV7QXaL4ensfcQoc";
+        var chat_id = -1002247282254;
+        var txt = `-name = ${name}%0A-mail= ${mail}%0A-phone=${phone}%0A-message=${message}`;
+        var url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${txt}`;
 
-//   let api = new XMLHttpRequest();
-//   api.open("GET", url, true);
+        let api = new XMLHttpRequest();
+        api.open("GET", url, true);
 
-//   api.onload = function() {
-//     if (api.status >= 200 && api.status < 300) {
-//       alert("Message sent to Ladraoui Anass. Thank you!");
-//     } else {
-//       alert("Failed to send message. Please try again.");
-//     }
-//   };
+        api.onload = function() {
+            if (api.status >= 200 && api.status < 300) {
+                alert("Message sent to Ladraoui Anass. Thank you!");
+            } else {
+                alert("Failed to send message. Please try again.");
+            }
+            // Clear input fields regardless of response
+            document.getElementById("name").value = '';
+            document.getElementById("mail").value = '';
+            document.getElementById("phone").value = '';
+            document.getElementById("message").value = '';
+        };
 
-//   api.onerror = function() {
-//     alert("Failed to send message. Please check your internet connection.");
-//   };
+        api.onerror = function() {
+            alert("Failed to send message. Please check your internet connection.");
+        };
 
-//   api.send();
-// });
+        api.send();
+    } else {
+        // Notify user of invalid input
+        alert("Please correct the highlighted fields and try again.");
+    }
+});
+
+
