@@ -294,7 +294,7 @@ btn.addEventListener("click", (e) => {
     }
 
     // Validate phone number format (basic check, adjust as needed)
-    var phonePattern = /^[0-9]{10}$/;
+    var phonePattern = /^\+212\s\d{3}\s\d{3}\s\d{3}$/;
     if (!phonePattern.test(phone)) {
         phoneInput.style.borderColor = 'red';
         isValid = false;
