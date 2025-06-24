@@ -464,7 +464,7 @@ header .navbar ul li a:hover {
 /* skills section starts */
 .skills {
   min-height: 90vh;
-  background: linear-gradient(to bottom, #57059e, #4a00e0); 
+/*   background: linear-gradient(to bottom, #57059e, #4a00e0);  */
   background-color: gray;
 /*   background-image: url('../images/lapy5.jpg'); */
   background-size: cover;
@@ -477,7 +477,7 @@ header .navbar ul li a:hover {
   color: rgb(255, 230, 0);
 }
 .skills .container {
-  background: rgba(0, 0, 22, 0.4);
+  background-color: gray;
   color: #fff;
   border-radius: 1rem;
   padding: 2rem;
