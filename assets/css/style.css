@@ -465,6 +465,7 @@ header .navbar ul li a:hover {
 .skills {
   min-height: 90vh;
   background: linear-gradient(to bottom, #57059e, #4a00e0); 
+  background-color: "white";
 /*   background-image: url('../images/lapy5.jpg'); */
   background-size: cover;
   background-repeat: no-repeat;
