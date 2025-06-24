@@ -465,7 +465,7 @@ header .navbar ul li a:hover {
 .skills {
   min-height: 90vh;
   background: linear-gradient(to bottom, #57059e, #4a00e0); 
-  background-color: "white";
+  background-color: gray;
 /*   background-image: url('../images/lapy5.jpg'); */
   background-size: cover;
   background-repeat: no-repeat;
@@ -649,7 +649,8 @@ header .navbar ul li a:hover {
 /* work section starts */
 .work {
   /* background: #010124; */
-  background: linear-gradient(to bottom, #000031, #00002c);
+/*   background: linear-gradient(to bottom, #000031, #00002c); */
+  background-color: gray;
 }
 .work h2 {
   color: #fff;
