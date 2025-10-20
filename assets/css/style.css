@@ -326,21 +326,50 @@ header .navbar ul li a:hover {
 /* social icons end */
 
 /* hero media queries starts*/
-@media (max-width: 450px) {
-  .home .btn {
-    margin: 4rem 0;
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+    padding: 8rem 5% 4rem;
   }
-  .socials {
-    margin-top: 12rem;
+  .home .content {
+    order: 2;
+    flex: none;
+  }
+  .home .image {
+    order: 1;
+    flex: none;
+    margin-bottom: 3rem;
   }
   .home .image img {
-    margin-top: -12rem;
+    width: 60%;
+    margin: 0 auto;
+    display: block;
+  }
+  .home .btn {
+    position: relative;
+    margin: 2rem auto 0;
+  }
+  .socials {
+    margin-top: 3rem;
+    text-align: center;
+  }
+}
+@media (max-width: 450px) {
+  .home .content h2 {
+    font-size: 3.5rem;
+  }
+  .home .content h2 span {
+    font-size: 3.5rem;
   }
   .home .content p {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
   .home .content p span {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
+  }
+  .home .image img {
+    width: 70%;
   }
 }
 /* hero media queries ends*/
@@ -1115,6 +1144,7 @@ form .button-area {
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+    margin-top: 2rem;
   }
   .project-card {
     padding: 2rem;
