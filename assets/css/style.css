@@ -217,12 +217,14 @@ header .navbar ul li a:hover {
 .home .image img {
   width: 70%;
   margin-left: 6rem;
-  border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 .home .image img:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
 }
 .home .content h2 {
   font-size: 5rem;
@@ -232,7 +234,7 @@ header .navbar ul li a:hover {
 .home .content h2 span {
   font-size: 5rem;
   font-weight: 800;
-  color: #3498db;
+  color: #2c3e50;
 }
 .home .content p {
   font-size: 2.5rem;
@@ -348,7 +350,7 @@ header .navbar ul li a:hover {
 
 /* about section starts */
 .about {
-  background: rgb(255, 255, 255);
+  background: #f8f9fa;
 }
 .about .row {
   display: flex;
@@ -517,7 +519,7 @@ header .navbar ul li a:hover {
 
 /* education section starts */
 .education {
-  background: #e5ecfb;
+  background: #ffffff;
   min-height: 80vh;
 }
 .education .qoute {
@@ -624,7 +626,8 @@ header .navbar ul li a:hover {
 
 /* work section starts */
 .work {
-  background: #ecf0f1;
+  background: #f8f9fa;
+  padding: 4rem 9%;
 }
 .work h2 {
   color: #2c3e50;
@@ -633,111 +636,64 @@ header .navbar ul li a:hover {
 .work .heading span {
   color: #3498db;
 }
-.work .box-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin: 2rem;
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
 }
-.work .box-container .box {
-  flex: 1 1 30rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  position: relative;
-  overflow: hidden;
-  height: 30rem;
+.project-card {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #3498db;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.work .box-container .box img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
-.work .box-container .box .content {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 85%;
-  left: 0;
-  background: rgba(255, 255, 255, 0.9);
-  display: flex;
-  flex-direction: column;
-}
-.work .box-container .box .content .tag {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 4.5rem;
-  width: 100%;
-  padding-left: 1rem;
-  background: #ffd900;
-}
-.work .box-container .box .content .tag h3 {
+.project-card h3 {
+  color: #2c3e50;
   font-size: 2rem;
-}
-.work .box-container .box:hover .content {
-  top: 25%;
-}
-.work .desc {
-  margin: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.work .desc p {
-  font-size: 1.5rem;
-}
-.work .desc .btns {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 2rem;
-}
-.work .desc .btns .btn {
-  line-height: 0;
-  display: inline;
-  padding: 1.5rem 2.5rem;
-  border-radius: 0.5rem;
-  font-size: 1.5rem;
-  color: #fff;
-  background: rgb(12, 12, 12);
-  margin-right: 2rem;
-}
-.work .desc .btns .btn:hover {
-  background: #310ae0f5;
-}
-.work .viewall {
-  display: flex;
-  justify-content: center;
-}
-.work .viewall .btn {
-  position: relative;
-  line-height: 0;
-  padding: 1.6rem 3rem;
-  border-radius: 0.5em;
-  transition: 0.5s;
-  color: rgb(255, 255, 255);
-  font-weight: 700;
-  border: 2px solid #fff;
-  box-shadow: 0px 5px 10px rgba(65, 84, 241, 0.4);
-  text-align: center;
-}
-.work .viewall .btn span {
+  margin-bottom: 1.5rem;
   font-weight: 600;
-  font-size: 1.7rem;
-  font-family: "Nunito", sans-serif;
+  line-height: 1.3;
 }
-.work .viewall .btn i {
-  margin-left: 0.3rem;
-  font-size: 1.5rem;
-  transition: 0.3s;
+.project-card p {
+  color: #34495e;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
-.work .viewall .btn:hover {
-  background: #fff;
-  color: #000;
+.tech-stack {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  border-left: 3px solid #27ae60;
 }
-.work .viewall .btn:hover i {
-  transform: translateX(5px);
+.project-card .btn {
+  display: inline-block;
+  padding: 1.2rem 2rem;
+  background: #3498db;
+  color: #fff;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.project-card .btn:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+}
+.project-card .btn i {
+  margin-left: 0.5rem;
 }
 /* work section ends */
 
@@ -914,7 +870,7 @@ header .navbar ul li a:hover {
 
 /* certifications section starts */
 .certifications {
-  background: #ffffff;
+  background: #f8f9fa;
   min-height: 80vh;
   padding: 4rem 9%;
 }
@@ -957,7 +913,7 @@ header .navbar ul li a:hover {
 
 /* activities section starts */
 .activities {
-  background: #ecf0f1;
+  background: #ffffff;
   min-height: 80vh;
   padding: 4rem 9%;
 }
@@ -1001,7 +957,7 @@ header .navbar ul li a:hover {
 
 /* contact section starts */
 .contact {
-  background: #e5ecfb;
+  background: #f8f9fa;
   min-height: 60vh;
 }
 .contact .container {
@@ -1155,8 +1111,27 @@ form .button-area {
 }
 /* contact section media queries ends */
 
-/* certifications and activities media queries starts */
+/* projects, certifications and activities media queries starts */
 @media screen and (max-width: 600px) {
+  .work {
+    padding: 2rem 5%;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .project-card {
+    padding: 2rem;
+  }
+  .project-card h3 {
+    font-size: 1.8rem;
+  }
+  .project-card p {
+    font-size: 1.3rem;
+  }
+  .tech-stack {
+    font-size: 1.1rem;
+  }
   .certifications, .activities {
     padding: 2rem 5%;
   }
@@ -1174,7 +1149,7 @@ form .button-area {
     font-size: 1.3rem;
   }
 }
-/* certifications and activities media queries ends */
+/* projects, certifications and activities media queries ends */
 
 /* contact section ends */
 

@@ -169,173 +169,92 @@
 
 <!-- work project section starts -->
 <section class="work" id="work">
-  <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made (Not Updated) </span></h2>
+  <h2 class="heading"><i class="fas fa-laptop-code"></i> Key <span>Projects</span></h2>
 
-  <div class="box-container">
-    <div class="box tilt">
-      <img draggable="false" src="./assets/images/projects/biometric/exemple.png" alt="" />
-      <div class="content">
-        <div class="tag">
-        <h3>Multibiometric Authentication System</h3>
-        </div>
-        <div class="desc">
-          <p>A smart authentication system which can be deployed as a
-            SaaS, PaaS or in smart building , it combine face recognition
-            and speaker recognition with a decision fusion it is based on
-            few shot learning , triplet loss function and cosine similarity
-            to compare voices vectors</p>
-          <div class="btns">
-            <!-- <a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a> -->
-            <a href="https://github.com/ladraouiAnass/multibiometric-authentication-system" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
-          </div>
-        </div>
-      </div>
+  <div class="projects-grid">
+    
+    <div class="project-card">
+      <h3>Multilingual TTS for Moroccan Darija</h3>
+      <p>• Built and cleaned a Darija voice corpus from local sources<br>
+      • Fine-tuned a Text-to-Speech model with audio/text alignment<br>
+      • Produced final report with recommendations for underrepresented dialects</p>
+      <div class="tech-stack">ESPnet, Tacotron2, Mozilla TTS, Python, HuggingFace Datasets</div>
+      <a href="#" class="btn" target="_blank">View Details <i class="fab fa-github"></i></a>
+    </div>
+
+    <div class="project-card">
+      <h3>Arabic Text Classification (Human vs AI-Generated)</h3>
+      <p>• Developed pipeline to classify Arabic texts written by humans vs LLMs<br>
+      • Fine-tuned GPT-2 on annotated dataset<br>
+      • Evaluated precision, recall, and F1-score metrics</p>
+      <div class="tech-stack">GPT-2, HuggingFace Transformers, scikit-learn, pandas</div>
+      <a href="#" class="btn" target="_blank">View Details <i class="fab fa-github"></i></a>
+    </div>
+
+    <div class="project-card">
+      <h3>Stock Price Prediction from Tweets (GAN + NLP)</h3>
+      <p>• Extracted and analyzed Twitter sentiment related to AMZN<br>
+      • Combined social signals with financial technical indicators<br>
+      • Built conditional GAN models for time-series forecasting</p>
+      <div class="tech-stack">NLTK, GAN (Keras), yfinance, pandas, matplotlib</div>
+      <a href="#" class="btn" target="_blank">View Details <i class="fab fa-github"></i></a>
+    </div>
+
+    <div class="project-card">
+      <h3>Multimodal Biometric Authentication (Voice + Face)</h3>
+      <p>• Developed authentication system combining facial and voice recognition<br>
+      • Implemented few-shot learning with triplet loss and cosine similarity<br>
+      • Deployed as SaaS/PaaS for smart home and enterprise applications</p>
+      <div class="tech-stack">FaceNet, SpeakerNet, TensorFlow, Flask, NumPy</div>
+      <a href="https://github.com/ladraouiAnass/multibiometric-authentication-system" class="btn" target="_blank">View Details <i class="fab fa-github"></i></a>
+    </div>
+
+    <div class="project-card">
+      <h3>OLAP/OLTP for HR Data</h3>
+      <p>• Designed system supporting OLTP workloads and OLAP analytics<br>
+      • Integrated Excel, JSON, and SQL Server sources with multidimensional aggregation<br>
+      • Built analysis cubes for spatio-temporal workforce exploration</p>
+      <div class="tech-stack">SQL Server, SSAS, Power BI, Python, pandas</div>
+      <a href="#" class="btn" target="_blank">View Details <i class="fab fa-github"></i></a>
+    </div>
+
+    <div class="project-card">
+      <h3>ETL for Training Program Search Platform</h3>
+      <p>• Extracted training program data from web sources and files<br>
+      • Transformed and consolidated into unified database<br>
+      • Automated pipeline for regular updates</p>
+      <div class="tech-stack">Python, Airflow, pandas, BeautifulSoup, MySQL</div>
+      <a href="#" class="btn" target="_blank">View Details <i class="fab fa-github"></i></a>
+    </div>
+
+    <div class="project-card">
+      <h3>Trading Portfolio Management Platform</h3>
+      <p>• Built trading account management app with risk-reduction strategies<br>
+      • Integrated real-time market data with visualization and backtesting<br>
+      • Developed lab for testing custom trading strategies</p>
+      <div class="tech-stack">PyQt5, ccxt, pandas, MySQL, matplotlib</div>
+      <a href="https://github.com/ladraouiAnass/trading-portfolio-management" class="btn" target="_blank">View Details <i class="fab fa-github"></i></a>
+    </div>
+
+    <div class="project-card">
+      <h3>Databricks Project Template (ETL with Spark)</h3>
+      <p>• Implemented local Spark pipelines in Dockerized environments<br>
+      • Structured reproducible project with unit testing<br>
+      • Deployed CI/CD pipelines for automation and portability</p>
+      <div class="tech-stack">Apache Spark, Docker, PySpark, Databricks CLI, Makefile, PyTest</div>
+      <a href="#" class="btn" target="_blank">View Details <i class="fab fa-github"></i></a>
+    </div>
+
+    <div class="project-card">
+      <h3>Car Price Prediction with Semi-Parametric Regression</h3>
+      <p>• Compared linear regression vs partially linear semi-parametric models<br>
+      • Applied statistical methods on car pricing datasets<br>
+      • Produced detailed report including ANOVA, R², and visualizations</p>
+      <div class="tech-stack">R (ggplot2, tidyr, dplyr, lm, lmtest, ggfortify)</div>
+      <a href="#" class="btn" target="_blank">View Details <i class="fab fa-github"></i></a>
     </div>
 
   </div>
-  <div class="box-container">
-
-    <div class="box tilt">
-      <img draggable="false" src="./assets/images/projects/football/exemple1.png" alt="" />
-      <div class="content">
-        <div class="tag">
-        <h3>Instance Segmentation and Object Detection</h3>
-        </div>
-        <div class="desc">
-          <p>Video analysis app for instance segmentation and object
-            detection applied on a football match with a large dataset
-            annotated on roboflow , using yolov8 and google collab for
-            training
-            </p>
-          <div class="btns">
-            <!-- <a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a> -->
-            <a href="https://github.com/ladraouiAnass/football-instance-segmentation-and-object-detection" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-
-  <div class="box-container">
-    <div class="box tilt">
-      <img draggable="false" src="./assets/images/projects/anasflow/exemple.png" alt="" />
-      <div class="content">
-        <div class="tag">
-        <h3>'anasflow' a deep neural network library from scratch</h3>
-        </div>
-        <div class="desc">
-          <p>The idea is to build a neural network library which contains
-            all the methods needed for training , validating, testing and
-            optimizing a neural network with different optimizers like
-            adagrad , momentum, batch, minibatch, stochastic gradient
-            descend , leaping frog metaheuristic algorithm . Also with
-            different loss and activations functions , all that based on
-            numpy and pandas libraries.</p>
-          <div class="btns">
-            <!-- <a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a> -->
-            <a href="https://github.com/ladraouiAnass/anasflow" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="box-container">
-    <div class="box tilt">
-      <img draggable="false" src="./assets/images/projects/trading/exemple.png" alt="" />
-      <div class="content">
-        <div class="tag">
-        <h3>trading platform for portfolio management</h3>
-        </div>
-        <div class="desc">
-          <p>The main objective of this project is to create a platform that
-            can manage accounts of traders in different platforms of
-            trading , based on a smart strategy that reduce risk and
-            boost benefits , also it contain a lab for test self strategies
-            with realtime prices of the stock market and provide metrics
-            to visualize and analyse the stock market with real data.
-            The technologies used in this project:
-            Pyqt5,ccxt api,pandas,mysql,matplotlib
-            .</p>
-          <div class="btns">
-            <!-- <a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a> -->
-            <a href="https://github.com/ladraouiAnass/trading-portfolio-management" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-
-  <div class="box-container">
-
-    <div class="box tilt">
-      <img draggable="false" src="./assets/images/projects/portfolio/exemple.png" alt="" />
-      <div class="content">
-        <div class="tag">
-        <h3>Portfolio Website</h3>
-        </div>
-        <div class="desc">
-          <p>Personal portfolio website. Don't need much info about it, just scroll down. You're here only!</p>
-          <div class="btns">
-            <!-- <a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a> -->
-            <a href="https://github.com/ladraouiAnass/anassladraoui.github.io" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="box-container">
-
-    <div class="box tilt">
-      <img draggable="false" src="./assets/images/projects/notepad/exemple2.png" alt="" />
-      <div class="content">
-        <div class="tag">
-        <h3>Text Editor</h3>
-        </div>
-        <div class="desc">
-          <p>A Java Desktop Application With a Responsive Design That Contain All Microsoft's Notepad's Functionalities</p>
-          <div class="btns">
-            <!-- <a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a> -->
-            <a href="https://github.com/ladraouiAnass/java-desktop-text-editor" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="box-container">
-
-    <div class="box tilt">
-      <img draggable="false" src="./assets/images/projects/calculaor/exemple1.png" alt="" />
-      <div class="content">
-        <div class="tag">
-        <h3>Desktop Calculator</h3>
-        </div>
-        <div class="desc">
-          <p>Java Rmi Application On Calculator App with A responsive Design That is Able To Evaluate Any Simple Mathematic Expression</p>
-          <div class="btns">
-            <!-- <a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a> -->
-            <a href="https://github.com/ladraouiAnass/java-remote-calculator" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-<!-- <div class="viewall">
-  <a href="projects/index.html" class="btn"><span>View All</span>
-    <i class="fas fa-arrow-right"></i>
-</a>
-</div>   -->
 
 </section>
 <!-- work project section ends -->
